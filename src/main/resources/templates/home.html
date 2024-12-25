@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" data-th-href="@{'/css/output.css'}" />
+    <style>
+      .container {
+        margin: auto;
+        width: 50%;
+        background-color: aliceblue;
+        text-align: center;
+        text-decoration-color: black;
+      }
+    </style>
+    <link
+      href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1 data-th-text="${Name}">Welcome to home page</h1>
+      <h3 data-th-text="${Founder}" class="text-2xl"></h3>
+      <a data-th-href="${GitHub}" class="my-8"
+        >GitHub Link for the source code of the company</a
+      >
+      <p class="my-8">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa facilis
+        id nisi exercitationem at mollitia, commodi aspernatur optio unde, rem
+        iure natus ex consectetur. Sit alias omnis architecto sunt assumenda
+        molestiae saepe ut deserunt totam necessitatibus obcaecati aperiam
+        repellat libero in consequatur at, officia nesciunt laudantium illum
+        fuga error modi doloribus.
+      </p>
+      <div class="my-2">
+        <button
+          class="px-3 py-2 rounded bg-blue-700 text-white hover:bg-blue-400"
+        >
+          Click Here
+        </button>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
+  </body>
+</html>

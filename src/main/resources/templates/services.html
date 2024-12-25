@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>This is Services Page</h1>
+
+    <div class="host-tag" th:replace="~{base :: parent(~{::p})}"> <!-- # lage element with particular id bhi pass kar sakte hain-->
+      <p>This is dynamic content.</p>
+    </div>
+    <div th:replace = "${isLogin}? ~{base :: parent(~{::p})} : ~{base :: second_parent}">
+        <p>This is p tag</p>
+        <section>This is section tag</section>
+    </div>
+    <!-- 
+    When you use a <div> instead of a <p>, the th:replace tries to 
+    replace the <div> with the parent fragment.
+    If the parent fragment includes the same th:replace logic, this 
+    creates a recursive loop where the fragment keeps including 
+    itself indefinitely. 
+    -->
+  </body>
+</html>
